@@ -63,7 +63,7 @@ La gerencia de operaciones requiere visibilidad centralizada para:
 
 ## 🖼️ Evidencias / Dashboard
 
-![Dashboard de Productividad y Piezas Fabricadas](Productividad_piezas_fabricadas.pdf)[cite: 10]
+![Dashboard de Productividad y Piezas Fabricadas](Productividad_piezas_fabricadas.pdf)
 
 ---
 
