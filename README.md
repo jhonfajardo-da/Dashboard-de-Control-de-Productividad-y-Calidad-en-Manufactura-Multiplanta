@@ -67,6 +67,32 @@ La gerencia de operaciones requiere visibilidad centralizada para:
 
 ---
 
+---
+
+## 💻 Código DAX Destacado
+
+```dax
+// 1. Tasa de Calidad Global
+Porcentaje_Calidad = 
+VAR PiezasBuenas = SUM(Producción[Piezas producidas]) - SUM(Producción[Piezas rechazadas])
+VAR TotalProducidas = SUM(Producción[Piezas producidas])
+RETURN
+DIVIDE(PiezasBuenas, TotalProducidas, 0)
+
+// 2. Horas Productivas (Sin Obstáculos)
+Horas_Productivas = 
+CALCULATE(
+    SUM(Producción[Total Horas]),
+    ISBLANK(Producción[Obstáculos])
+)
+
+// 3. Horas No Productivas (Con Obstáculos)
+Horas_No_Productivas = 
+CALCULATE(
+    SUM(Producción[Total Horas]),
+    NOT(ISBLANK(Producción[Obstáculos]))
+)
+
 ## 📂 Estructura del Repositorio
 ```text
 ├── README.md                           <- Presentación ejecutiva del proyecto
